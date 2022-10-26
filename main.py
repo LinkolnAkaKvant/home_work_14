@@ -35,6 +35,7 @@ def title_search(title):
     return flask.jsonify(result)
 
 
+
 # Вьюшка для поиска по годам
 @app.route("/movie/<year1>/to/<year2>")
 def search_by_years(year1, year2):
