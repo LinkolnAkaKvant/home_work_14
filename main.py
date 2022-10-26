@@ -23,7 +23,7 @@ def run_sql(sql):
 @app.route("/movie/<title>")
 def title_search(title):
     sql = f''' select title, country, release_year, listed_in as genre, description from netflix
-        where title='{title}'
+        where lower(title)='{title}'
         order by date_added desc
         limit 1 
             '''
